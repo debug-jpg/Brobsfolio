@@ -1,30 +1,154 @@
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
-.biscastLogo { width: 100px; height: 100px; }
+body {
+	font-family: "Bahnschrift", Arial, sans-serif;
+}
 
-.content {
-    display: flex;
-    align-items: flex-start;
-    gap: 1.8rem;
-    margin-bottom: 1.8rem;
+.layout {
+	display: flex;
+	min-height: 100vh;
+}
+
+aside {
+	display: flex;
+	flex-direction: column;
+	width: 18rem;
+	background: #800000;
+	color: white;
+	padding: 24px;
+	min-height: 100vh;
+}
+
+.info {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 2em;
+}
+
+aside nav {
+	display: flex;
+	flex-direction: column;
+}
+
+aside nav a {
+	display: flex;
+	justify-content: center;
+	color: white;
+	text-decoration: none;
+	padding: 12px 24px;
+	border-radius: 8px;
+
+	transition:
+		background-color 0.3s ease,
+		transform 0.3s ease;
+}
+
+aside nav a:hover,
+aside nav a.active {
+	color: aliceblue;
+	background-color: #600000;
+	transform: scale(1.05);
+}
+
+main {
+	flex: 1;
+	justify-content: center;
+	padding: 32px;
+}
+
+.biscastLogo {
+	width: 50px;
+	height: 50px;
+}
+
+
+/* MAIN */
+
+/* Mission and Vision */
+.mission, .vision, .coreValues {
+	position: relative;
+	margin-bottom: 4rem;
+	padding: 3rem 4rem;
+	border-radius: 16px;
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	border: 1px solid rgba(0, 0, 0, 0.03);
+	overflow: hidden;
+}
+
+.mission::before, .vision::before, .coreValues::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 6px;
+	background: linear-gradient(90deg, #800000 0%, #c42b2b 100%);
+}
+
+.mission:hover, .vision:hover, .coreValues:hover {
+	transform: scale(1.01);
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.mission h1, .vision h1, .coreValues h1.title {
+	margin-bottom: 1rem;
+}
+
+.divider {
+	border-top: 2px solid rgba(128, 0, 0, 0.1);
+	width: 100%;
+	margin: auto auto 1rem auto;
+}
+
+
+/* Core Values */
+.coreValues h1 {
+	margin-bottom: 0.5rem;
+}
+.core-value {
+	display: flex;
+	align-items: flex-start;
+	gap: 1.2rem;
+	padding: 1.5rem;
+	margin-bottom: 1.8rem;
+	border-radius: 12px;
+	background: #fefefe;
+	border: 1px solid #f0f0f0;
+	transition: all 0.3s ease;
+	padding: 1.5rem;
+}
+
+.core-value:hover {
+	background: #fffafa;
+	border-color: rgba(128, 0, 0, 0.3);
+	transform: scale(1.02);
+	box-shadow: 0 8px 25px rgba(128, 0, 0, 0.08);;
 }
 
 .letter {
-    flex: 0 0 3rem;
-}
-
-.content h1,
-.details h3,
-.details p {
-    margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5rem;
+	font-weight: 900;
+	color: #800000;
+	width: 80px;
+	flex-shrink: 0;
+	text-shadow: 2px 2px 4px rgba(128, 0, 0, 0.15);
+	line-height: 1;
 }
 
 .details {
-    flex: 1;
+	flex: 1;
 }
 
 .details h3 {
-    margin-bottom: 0.5em;
+	color: #800000;
+	text-transform: uppercase;
+	margin-bottom: 0.5em;
 }
