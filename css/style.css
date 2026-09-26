@@ -69,7 +69,7 @@ main {
 /* MAIN */
 
 /* Mission and Vision */
-.mission, .vision, .coreValues {
+.mission, .vision, .coreValues, .welcome {
 	position: relative;
 	margin-bottom: 4rem;
 	padding: 3rem 4rem;
@@ -80,7 +80,7 @@ main {
 	overflow: hidden;
 }
 
-.mission::before, .vision::before, .coreValues::before {
+.mission::before, .vision::before, .coreValues::before, .welcome::before {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -90,7 +90,7 @@ main {
 	background: linear-gradient(90deg, #800000 0%, #c42b2b 100%);
 }
 
-.mission:hover, .vision:hover, .coreValues:hover {
+.mission:hover, .vision:hover, .coreValues:hover, .welcome:hover {
 	transform: scale(1.01);
 	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
 }
@@ -151,4 +151,9 @@ main {
 	color: #800000;
 	text-transform: uppercase;
 	margin-bottom: 0.5em;
+}
+
+/* Miscellaneuos */
+.welcome h1 {
+	font-weight: normal;
 }
