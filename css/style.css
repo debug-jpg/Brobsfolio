@@ -1,15 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
 
 :root {
-	--background: #0F1412;
-	--primary: #8B2635;
-	--secondary: #21644A;
-	--accent: #D4AF37;
-	--cards: #1B211E;
-	--text: #F5F1E8;
-	--primary-gradient: linear-gradient(180deg, #3D0D14, #7A1F2B, #A83D4C);
-	--secondary-gradient: linear-gradient(135deg, #0A241B, #174A3A, #286B53);
-	--accent-gradient: linear-gradient(90deg, #5C4308, #A98220, #D4AF37);
+	--background: #F7F5F0;
+	--sidebar: #101827;
+	--sidebar-accents: #27364D;
+	--secondary: #21634a;
+	--accent: #B8754A;
+	--hero: #123C45;
+	--cards: #ffffff;
+
+	/* Texts */
+	--main-text: #18202B;
+	--secondary-text: #687384;
+
+	--sidebar-text: #F7F5F0;
+	--secondary-sidebar-text: #D9D2C3;
+	--sidebar-active-text: #D6B36A;
+
+	/* Hero */
+	--hero-primary-text: #ffffff;
+	--hero-secondary-text: #D9D2C3;
+	--hero-accent-text: #D6B36A;
 }
 
 * {
@@ -32,8 +43,8 @@ aside {
 	display: flex;
 	flex-direction: column;
 	width: 12rem;
-	background: var(--primary);
-	color: var(--text);
+	background: var(--sidebar);
+	color: var(--sidebar-text);
 	padding: 16px;
 	min-height: 100vh;
 }
@@ -53,7 +64,7 @@ aside nav a {
 	display: flex;
 	/* justify-content: center; */
 	align-items: center;
-	color: var(--text);
+	color: var(--sidebar-text);
 	text-decoration: none;
 	margin-bottom: 12px;
 	padding: 12px 28px;
@@ -70,12 +81,12 @@ aside nav a i {
 }
 
 aside nav a.active {
-	background: #3D0D14;
+	color: var(--sidebar-active-text);
+	background: var(--sidebar-accents);
 }
 
 aside nav a:hover {
-	color: var(--text);
-	background-color: #3D0D14;
+	background-color: var(--sidebar-accents);
 	transform: scale(1.05);
 }
 
@@ -127,14 +138,14 @@ main {
 }
 
 .btn-primary {
-	background-color: var(--cards);
+	background: var(--accent);
 	color: var(--text);
 }
 
 /* Hero */
 .hero {
-	background: var(--secondary-gradient);
-	color: var(--text);
+	background: var(--hero);
+	color: var(--hero-primary-text);
 	overflow: hidden;
 	border-radius: 18px;
 }
@@ -151,7 +162,7 @@ main {
 	display: inline-flex;
 	gap: 8px;
 	align-items: center;
-	color: aqua;
+	color: var(--hero-accent-text);
 	font-size: 0.78rem;
 	text-transform: uppercase;
 	letter-spacing: 1.5px;
@@ -165,11 +176,8 @@ main {
 	letter-spacing: -2px;
 }
 
-.hero span {
-	color: var(--accent);
-}
-
 .hero p {
+	color: var(--hero-secondary-text);
 	max-width: 640px;
 	font-size: 1.08rem;
 }
@@ -221,10 +229,10 @@ main {
 	padding: 3rem 4rem;
 	border-radius: 16px;
 	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
-	background: var(--secondary);
-	color: var(--text);
+	background: var(--cards);
+	color: var(--main-text);
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
-	border: 1px solid rgba(255, 255, 255, 0.03);
+	border: 1px solid #E5E0D6;
 	overflow: hidden;
 }
 
@@ -238,7 +246,7 @@ main {
 	left: 0;
 	right: 0;
 	height: 8px;
-	background: linear-gradient(90deg, #800000 0%, #c42b2b 100%);
+	background: linear-gradient(90deg, #123C45 0%, #101827 100%);
 }
 
 .mission:hover,
@@ -246,7 +254,7 @@ main {
 .coreValues:hover,
 .welcome:hover {
 	transform: scale(1.01);
-	box-shadow: 0 10px 40px rgba(255, 255, 255, 0.15);
+	box-shadow: 0 10px 40px rgba(255, 255, 255, 0.22);
 }
 
 .mission h1,
@@ -255,8 +263,13 @@ main {
 	margin-bottom: 1rem;
 }
 
+.mission p,
+.vision p {
+	color: var(--secondary-text);
+}
+
 .divider {
-	border-top: 2px solid rgba(128, 0, 0, 0.1);
+	border-top: 2px solid rgba(128, 0, 0, 0.15);
 	width: 100%;
 	margin: auto auto 1rem auto;
 }
@@ -283,8 +296,7 @@ main {
 
 .core-value:hover {
 	transform: scale(1.02);
-	box-shadow: 0 8px 25px rgba(128, 0, 0, 0.08);
-	;
+	box-shadow: 0 8px 25px #123c4530;
 }
 
 .letter {
@@ -293,12 +305,12 @@ main {
 	align-items: center;
 	font-size: 1.5rem;
 	font-weight: 900;
-	color: var(--text);
+	color: var(--main-text);
 	width: 80px;
 	flex-shrink: 0;
-	text-shadow: 2px 2px 4px rgba(128, 0, 0, 0.15);
+	text-shadow: 2px 2px 4px #18202B30;
 	line-height: 1;
-	background-color: rgba(245, 185, 66, .23);
+	background-color: #B8754A30;
 	border-radius: 6px;
 }
 
@@ -306,6 +318,10 @@ main {
 	flex: 1;
 	margin: 0;
 	padding: 0.5rem;
+}
+
+.details p {
+	color: var(--secondary-text);
 }
 
 .details h3 {
