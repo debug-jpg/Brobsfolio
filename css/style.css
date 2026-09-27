@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
+
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -5,7 +7,7 @@
 }
 
 body {
-	font-family: "Bahnschrift", Arial, sans-serif;
+	font-family: "Montserrat", Arial, sans-serif;
 }
 
 .layout {
@@ -16,10 +18,10 @@ body {
 aside {
 	display: flex;
 	flex-direction: column;
-	width: 18rem;
+	width: 12rem;
 	background: #800000;
 	color: white;
-	padding: 24px;
+	padding: 16px;
 	min-height: 100vh;
 }
 
@@ -36,15 +38,22 @@ aside nav {
 
 aside nav a {
 	display: flex;
-	justify-content: center;
+	/* justify-content: center; */
+	align-items: center;
 	color: white;
 	text-decoration: none;
-	padding: 12px 24px;
+	margin-bottom: 12px;
+	padding: 12px 28px;
 	border-radius: 8px;
-
+	gap: 12px;
 	transition:
 		background-color 0.3s ease,
 		transform 0.3s ease;
+}
+
+aside nav a i {
+	width: 20px;
+	text-align: center;
 }
 
 aside nav a:hover,
@@ -57,7 +66,7 @@ aside nav a.active {
 main {
 	flex: 1;
 	justify-content: center;
-	padding: 32px;
+	padding: 8px 16px 8px 16px;
 }
 
 .biscastLogo {
@@ -67,6 +76,120 @@ main {
 
 
 /* MAIN */
+
+.container-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 28px;
+}
+
+.container {
+	width: min(1180px, calc(100% - 36px));
+	margin-inline: auto;
+}
+
+/* Buttons */
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 11px 18px;
+	border-radius: 10px;
+	text-decoration: none;
+	font-weight: 800;
+	border: 1px solid transparent;
+}
+
+.btn-outline {
+	color: whitesmoke;
+	border-color: rgba(255, 255, 255, .45);
+}
+
+.btn-primary {
+	background-color: gold;
+	color: #263747;
+}
+
+/* Hero */
+.hero {
+	background: radial-gradient(circle at 85% 15%, rgba(245, 185, 66, .23), transparent 25%), linear-gradient(135deg, #5e0d0d 0%, #aa1723 60%, #c52727 100%);
+	color: white;
+	overflow: hidden;
+	border-radius: 18px;
+}
+
+.inner-hero {
+	min-height: 420px;
+	display: grid;
+	grid-template-columns: 1.1fr 0.9fr;
+	gap: 80px;
+	align-items: center;
+	box-shadow: 2px rgba(0, 0, 0, 0.05);
+}
+
+.eyebrow {
+	display: inline-flex;
+	gap: 8px;
+	align-items: center;
+	color: aqua;
+	font-size: 0.78rem;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	font-weight: 900;
+}
+
+.hero h1 {
+	font-size: clamp(2.35rem, 5vw, 4.3rem);
+	margin: 14px 0 18px;
+	line-height: 1.03;
+	letter-spacing: -2px;
+}
+
+.hero span {
+	color: gold;
+}
+
+.hero p {
+	max-width: 640px;
+	font-size: 1.08rem;
+}
+
+.hero-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	margin-top: 28px;
+}
+
+.hero-card {
+	background: rgba(255, 255, 255, .10);
+	border: 1px solid rgba(255, 255, 255, .20);
+	border-radius: 22px;
+	padding: 28px;
+	box-shadow: 0 25px 60px rgba(0, 0, 0, 0.18);
+}
+
+.hero-card .seal {
+	width: 88px;
+	height: 88px;
+	border: 5px solid gold;
+	border-radius: 50%;
+	display: grid;
+	place-items: center;
+	margin-bottom: 20px;
+	font-weight: 1000;
+	font-size: 1.25rem;
+}
+
+.hero-card h3 {
+	margin-bottom: 7px;
+	font-size: 1.4rem;
+}
+
+.hero-card p {
+	margin: 0;
+	font-size: 0.94rem;
+}
 
 /* Mission and Vision */
 .mission, .vision, .coreValues, .welcome {
