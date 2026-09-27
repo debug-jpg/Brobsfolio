@@ -21,6 +21,12 @@
 	--hero-primary-text: #ffffff;
 	--hero-secondary-text: #D9D2C3;
 	--hero-accent-text: #D6B36A;
+
+	/* Footer */
+	--footer-background: #0B111A;
+	--footer-primary-text: #F7F5F0;
+	--footer-secondary-text: #D9D2C3;
+	--footer-hover: #D6B36A;
 }
 
 * {
@@ -285,13 +291,12 @@ main {
 	display: flex;
 	align-items: flex-start;
 	gap: 1.2rem;
-	padding: 1.5rem;
-	margin-bottom: 1.8rem;
+	margin-bottom: 1.0rem;
 	border-radius: 12px;
 	background: var(--cards);
 	border: 1px solid #f0f0f0;
 	transition: all 0.3s ease;
-	padding: 1.5rem;
+	padding: .6rem;
 }
 
 .core-value:hover {
@@ -317,7 +322,7 @@ main {
 .details {
 	flex: 1;
 	margin: 0;
-	padding: 0.5rem;
+	padding: 0.3rem;
 }
 
 .details p {
