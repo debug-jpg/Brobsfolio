@@ -336,7 +336,80 @@ main {
 	margin-bottom: 0.5em;
 }
 
-/* Miscellaneuos */
-.welcome h1 {
-	font-weight: normal;
+/* Section */
+.section { padding: 76px 0; }
+
+.section-head {
+	display: flex;
+	align-items: end;
+	justify-content: space-between;
+	gap: 25px;
+	margin-bottom: 32px;
+}
+
+.section-head h2 {
+	margin: 0;
+	color: var(--main-text);
+	font-size: clamp(1.8rem, 3vw, 2.5rem);
+	line-height: 1.15;
+}
+
+.section-head p {
+	max-width: 600px;
+	margin: 0;
+	color: var(--secondary-text);
+}
+
+.kicker {
+	color: var(--hero);
+	font-weight: 900;
+	text-transform: uppercase;
+	font-size: .75rem;
+	letter-spacing: 1.4px;
+	margin-bottom: 8px;
+}
+
+/* Cards */
+.cards {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+}
+
+.card {
+	background: white;
+	border: 1px solid rgba(0, 0, 0, .20);
+	border-radius: 16px;
+	padding: 25px;
+	box-shadow: 0 12px 30px rgba(18, 59, 99, .10);
+}
+
+.card h3 {
+	margin: 0 0 8px;
+	color: var(--secondary);
+}
+
+.card p {
+	color: var(--secondary-text);
+	margin: 0;
+}
+
+.card a {
+	display: inline-block;
+	margin-top: 15px;
+	color: var(--accent);
+	font-weight: 800;
+	text-decoration: none;
+}
+
+.card-icon {
+	width: 48px;
+	height: 48px;
+	border-radius: 12px;
+	display: grid;
+	place-items: center;
+	background: skyblue;
+	color: var(--main-text);
+	font-size: 1.35rem;
+	margin-bottom: 18px;
 }
