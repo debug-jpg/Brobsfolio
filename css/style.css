@@ -413,3 +413,40 @@ main {
 	font-size: 1.35rem;
 	margin-bottom: 18px;
 }
+
+/* Stats */
+.section.alt {
+	background: white;
+	border-radius: 18px;
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+}
+
+.stats {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	border: 1px solid rgba(0, 0, 0, .20);
+	background: white;
+	border-radius: 16px;
+	overflow: hidden;
+	box-shadow: 0 12px 30px rgba(18, 59, 99, .10);
+}
+
+.stat {
+	padding: 28px 18px;
+	text-align: center;
+	border-right: 1px solid rgba(0, 0, 0, .20);
+}
+
+.stat strong {
+	display: block;
+	color: var(--hero);
+	font-size: 1.9rem;
+	line-height: 1;
+	margin-bottom: 8px;
+}
+
+.stat span {
+	color: var(--secondary-text);
+	font-size: 0.9rem;
+}
+
