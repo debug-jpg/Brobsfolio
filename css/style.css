@@ -39,6 +39,7 @@
 body {
 	font-family: "Montserrat", Arial, sans-serif;
 	background-color: var(--background);
+	line-height: 1.6;
 }
 
 .layout {
@@ -46,7 +47,7 @@ body {
 	min-height: 100vh;
 }
 
-aside {
+.sidebar {
 	display: flex;
 	flex-direction: column;
 	width: 12rem;
@@ -62,12 +63,12 @@ aside {
 	margin-bottom: 2em;
 }
 
-aside nav {
+.sidebar nav {
 	display: flex;
 	flex-direction: column;
 }
 
-aside nav a {
+.sidebar nav a {
 	display: flex;
 	/* justify-content: center; */
 	align-items: center;
@@ -82,17 +83,17 @@ aside nav a {
 		transform 0.3s ease;
 }
 
-aside nav a i {
+.sidebar nav a i {
 	width: 20px;
 	text-align: center;
 }
 
-aside nav a.active {
+.sidebar nav a.active {
 	color: var(--sidebar-active-text);
 	background: var(--sidebar-accents);
 }
 
-aside nav a:hover {
+.sidebar nav a:hover {
 	background-color: var(--sidebar-accents);
 	transform: scale(1.05);
 }
@@ -453,6 +454,104 @@ main {
 .stat span {
 	color: var(--secondary-text);
 	font-size: 0.9rem;
+}
+/* News */
+.news {
+	background: white;
+	border-radius: 18px;
+}
+
+.news-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px;
+}
+
+.news-card {
+	background: white;
+	border: 1px solid rgba(0, 0, 0, .20);
+	border-radius: 16px;
+	overflow: hidden;
+	box-shadow: 0 12px 30px rgba(18, 59, 99, .10);
+}
+
+.news-image {
+	height: 270px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: grid;
+	place-items: center;
+	color: var(--hero);
+	font-size: 2.2rem;
+}
+
+.news-content {
+	padding: 21px;
+}
+
+.news-content iframe {
+	display: block;
+	margin: 0 auto;
+	border-radius: 12px;
+	border: 1px solid rgba(0, 0, 0, .20);
+	overflow: hidden;
+	width: 100%;
+}
+
+.news-content h3 {
+	margin: 7px 0;
+	font-size: 1.08rem;
+	line-height: 1.35;
+	color: var(--main-text);
+}
+
+.news-content p {
+	color: var(--secondary-text);
+	font-size: .9rem;
+	margin: 0;
+}
+
+.news-content a {
+	color: var(--accent);
+	font-weight: 800;
+	text-decoration: none;
+}
+
+.news-date {
+	color: var(--accent);
+	font-size: .75rem;
+	font-weight: 900;
+	text-transform: 900;
+}
+
+/* Content  */
+.content-grid {
+	display: grid;
+	grid-template-columns: 1.4fr .6fr;
+	gap: 28px;
+}
+
+.content-panel {
+	background: white;
+	border: 1px solid rgba(0, 0, 0, .20);
+	border-radius: 16px;
+	padding: 30px;
+	box-shadow: 0 12px 30px rgba(18, 59, 99, .10);
+}
+
+.content-panel p {
+	color: var(--secondary-text);
+	margin: 16px 0;
+}
+
+.content-panel h3 {
+	color: var(--hero);
+	margin-bottom: 6px;
+}
+
+.content-panel a {
+	color: inherit;
 }
 
 /* Misc */
