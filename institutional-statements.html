@@ -12,16 +12,29 @@
 
 <body>
     <div class="layout">
-        <aside class="sidebar">
-            <section class="info">
-                <h1>Portfolio</h1>
-            </section>
+        <aside id="side" class="sidenav" aria-label="Sidebar">
+            <div class="top">
+                <span class="logo">Portfolio</span>
+                <button class="icon" id="close" aria-label="Collapse Sidebar">
+                    <i class="fa-solid fa-table-columns"></i>
+                </button>
+            </div>
 
             <nav>
-                <a href="index.html"><i class="fa-solid fa-house"></i>Home</a>
-                <a href="about.html"><i class="fa-solid fa-circle-info"></i>About</a>
-                <a href="institutional-statements.html" class="active"><i
-                        class="fa-solid fa-file-lines"></i>Institutional Statements</a>
+                <a href="index.html" class="btns item" title="Home">
+                    <i class="fa-solid fa-home"></i>
+                    <span class="label">Home</span>
+                </a>
+
+                <a href="about.html" class="btns item" title="About">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span class="label">About</span>
+                </a>
+
+                <a href="institutional-statements.html" class="btns item on" title="Insitutional Statements">
+                    <i class="fa-solid fa-building-columns"></i>
+                    <span class="label">Insitutional Statements</span>
+                </a>
             </nav>
         </aside>
 

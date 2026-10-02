@@ -47,57 +47,135 @@ body {
 	min-height: 100vh;
 }
 
-.sidebar {
-	display: flex;
-	flex-direction: column;
-	width: 12rem;
-	background: var(--sidebar);
+/* Sidebar */
+.btns {
 	color: var(--sidebar-text);
-	padding: 16px;
-	min-height: 100vh;
-}
-
-.info {
-	display: flex;
-	justify-content: center;
-	margin-bottom: 2em;
-}
-
-.sidebar nav {
-	display: flex;
-	flex-direction: column;
-}
-
-.sidebar nav a {
-	display: flex;
-	/* justify-content: center; */
-	align-items: center;
-	color: var(--sidebar-text);
+	background: var(--sidebar-accents);
+	border: 0;
+	cursor: pointer;
 	text-decoration: none;
 	margin-bottom: 12px;
-	padding: 12px 28px;
-	border-radius: 8px;
-	gap: 12px;
-	transition:
-		background-color 0.3s ease,
-		transform 0.3s ease;
 }
 
-.sidebar nav a i {
-	width: 20px;
-	text-align: center;
+:focus-visible {
+	outline: 2px solid var(--accent);
+	outline-offset: 1px;
 }
 
-.sidebar nav a.active {
-	color: var(--sidebar-active-text);
+.sidenav {
+	width: 288px;
+	max-width: 85%;
+	height: 100vh;
+	position: sticky;
+	top: 0;
 	background: var(--sidebar-accents);
+	border-right: white;
+	display: flex;
+	flex-direction: column;
+	transition: width 0.2s;
+	overflow: hidden;
+	flex: none;
 }
 
-.sidebar nav a:hover {
-	background-color: var(--sidebar-accents);
-	transform: scale(1.05);
+.sidenav.mini {
+	width: 64px;
 }
 
+.sidenav.mini .logo,
+.sidenav.mini .label,
+.sidenav.mini h2 {
+	display: none;
+}
+
+.sidenav.mini .top {
+	justify-content: center;
+}
+
+.sidenav.mini nav .item {
+	justify-content: center;
+}
+
+.sidenav.mini nav .item {
+	padding: 8px 0;
+}
+
+.sidenav.mini nav {
+	padding: 4px 10px;
+}
+
+/* Top */
+.top {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 14px 14px 8px;
+	margin-bottom: 16px;
+}
+
+.logo {
+	color: var(--sidebar-text);
+	font-weight: 600;
+	font-size: 1.25rem;
+	letter-spacing: 0.15em;
+}
+
+.icon {
+	background: transparent;
+	border: none;
+	outline: none;
+	width: 30px;
+	height: 30px;
+	border-radius: 8px;
+	display: grid;
+	place-items: center;
+	color: var(--sidebar-text);
+}
+
+.icon:hover {
+	background: var(--sidebar-active-text);
+}
+
+/* Nav */
+nav {
+	padding: 4px 8px;
+}
+
+.item {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	width: 100%;
+	padding: 8px 10px;
+	border-radius: 8px;
+	text-align: left;
+	transition: background 0.3s ease;
+}
+
+.item:hover {
+	background: var(--sidebar-active-text);
+	color: var(--main-text);
+}
+
+.item.on {
+	background: var(--sidebar-active-text);
+	color: var(--main-text);
+}
+
+.item svg {
+	flex: none;
+	color: var(--secondary-text);
+}
+
+.new {
+	color: var(--accent);
+	font-weight: 500;
+}
+
+.new svg {
+	color: var(--accent);
+}
+
+/* MAIN */
 main {
 	opacity: 0;
 	flex: 1;
@@ -105,14 +183,6 @@ main {
 	padding: 8px 16px 8px 16px;
 	animation: pageLoad 0.3s ease forwards;
 }
-
-.biscastLogo {
-	width: 50px;
-	height: 50px;
-}
-
-
-/* MAIN */
 
 .container-grid {
 	display: grid;
@@ -343,7 +413,9 @@ main {
 }
 
 /* Section */
-.section { padding: 76px 0; }
+.section {
+	padding: 76px 0;
+}
 
 .section-head {
 	display: flex;
@@ -455,6 +527,7 @@ main {
 	color: var(--secondary-text);
 	font-size: 0.9rem;
 }
+
 /* News */
 .news {
 	background: white;
@@ -555,6 +628,8 @@ main {
 }
 
 /* Misc */
-p, h1, h3 {
+p,
+h1,
+h3 {
 	cursor: context-menu;
 }
