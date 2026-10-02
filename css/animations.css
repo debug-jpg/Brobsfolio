@@ -1,0 +1,5 @@
+@keyframes pageLoad {
+    to {
+        opacity: 1;
+    }
+}
