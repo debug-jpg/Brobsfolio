@@ -14,6 +14,7 @@
 	--main-text: #18202B;
 	--secondary-text: #687384;
 
+	/* Sidebar */
 	--sidebar-text: #F7F5F0;
 	--secondary-sidebar-text: #D9D2C3;
 	--sidebar-active-text: #D6B36A;
@@ -28,6 +29,9 @@
 	--footer-primary-text: #F7F5F0;
 	--footer-secondary-text: #D9D2C3;
 	--footer-hover: #D6B36A;
+
+	/* Misc */
+	--mace-banner: url("https://scontent.fmnl8-2.fna.fbcdn.net/v/t39.30808-6/539468961_122234879786148095_6742328133425728079_n.png?stp=dst-png&cstp=mx1640x856&ctp=s960x960&_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeH1y1jY5A7xcd_6RIh402pMKAhOMZHKDZMoCE4xkcoNk0Eb6GtA_wdvmCMENn_6rTIPZ0AjakTwjjMd56s71New&_nc_ohc=cn6nIbv9mFMQ7kNvwG6UtEN&_nc_oc=AdrihDIjB472Ann0YQuOTHdGpF_9jEn4rAsbme8RFmlSPnWr4f-_ACVAUquKmJLSn3I&_nc_zt=23&_nc_ht=scontent.fmnl8-2.fna&_nc_gid=4nJn0jVVkj9131Fjpb6A1Q&_nc_ss=7b2a8&oh=00_AQPtmOOtM6PG3Ib_Mi6FhnuTj6O3kvT_tpY-qV1WPnbwAA&oe=6AC669E1") center / cover no-repeat;
 }
 
 * {
@@ -297,6 +301,12 @@ main {
 .hero-card p {
 	margin: 0;
 	font-size: 0.94rem;
+}
+
+#mace {
+	background:
+		linear-gradient(90deg, var(--hero), #123C4580),
+		var(--mace-banner) !important;
 }
 
 /* Mission and Vision */
