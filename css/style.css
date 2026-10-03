@@ -643,3 +643,197 @@ h1,
 h3 {
 	cursor: context-menu;
 }
+
+/* Tablet */
+@media (max-width: 1024px) {
+	.cards {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.inner-hero {
+		gap: 24px;
+		padding: 32px 0;
+	}
+
+	.content-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* Mobile: sidebar becomes bottom nav */
+@media (max-width: 768px) {
+	.layout {
+		display: block;
+	}
+
+	/* Bottom nav bar (also overrides the .mini state) */
+	.sidenav,
+	.sidenav.mini {
+		position: fixed;
+		top: auto;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		max-width: 100%;
+		height: auto;
+		flex-direction: row;
+		border-right: 0;
+		border-top: 1px solid rgba(255, 255, 255, .12);
+		box-shadow: 0 -6px 20px rgba(0, 0, 0, .15);
+		padding-bottom: env(safe-area-inset-bottom, 0px);
+		z-index: 100;
+	}
+
+	/* No logo / collapse button on mobile */
+	.sidenav .top,
+	.sidenav.mini .top {
+		display: none;
+	}
+
+	.sidenav nav,
+	.sidenav.mini nav {
+		display: flex;
+		justify-content: space-around;
+		gap: 4px;
+		width: 100%;
+		padding: 6px 8px;
+	}
+
+	.sidenav nav .item,
+	.sidenav.mini nav .item {
+		flex: 1;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 4px;
+		margin-bottom: 0;
+		padding: 8px 4px;
+		font-size: 0.7rem;
+		line-height: 1.2;
+		text-align: center;
+		min-width: 0;
+	}
+
+	.sidenav .item svg {
+		font-size: 1.15rem;
+	}
+
+	/* Always show labels, even if JS toggled .mini */
+	.sidenav .label,
+	.sidenav.mini .label {
+		display: block;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		max-width: 100%;
+	}
+
+	/* Leave room so content isn't hidden behind the bar */
+	main {
+		padding: 8px 12px calc(84px + env(safe-area-inset-bottom, 0px));
+	}
+
+	/* Layout */
+	.container {
+		width: 100%;
+	}
+
+	.inner-hero {
+		grid-template-columns: 1fr;
+		min-height: 0;
+		padding: 28px 20px;
+	}
+
+	.hero h1 {
+		letter-spacing: -1px;
+	}
+
+	.hero-card {
+		padding: 20px;
+	}
+
+	.hero-actions .btn {
+		flex: 1 1 140px;
+	}
+
+	.section {
+		padding: 40px 0;
+	}
+
+	.section.alt .container,
+	.section .container {
+		padding-inline: 4px;
+	}
+
+	.section-head {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 12px;
+		margin-bottom: 24px;
+	}
+
+	.cards,
+	.news-grid,
+	.container-grid,
+	.content-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.stats {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.stat:nth-child(2n) {
+		border-right: 0;
+	}
+
+	.stat:nth-child(-n+2) {
+		border-bottom: 1px solid rgba(0, 0, 0, .20);
+	}
+
+	.news-image {
+		height: 200px;
+	}
+
+	.mission,
+	.vision,
+	.coreValues {
+		padding: 2rem 1.25rem;
+	}
+
+	.core-value {
+		gap: 0.8rem;
+	}
+
+	.letter {
+		width: 56px;
+	}
+
+	#mace {
+		background:
+			linear-gradient(90deg, var(--hero), #123C45DF),
+			var(--mace-banner) !important;
+	}
+}
+
+/* Small phones */
+@media (max-width: 400px) {
+	.stats {
+		grid-template-columns: 1fr;
+	}
+
+	.stat {
+		border-right: 0;
+		border-bottom: 1px solid rgba(0, 0, 0, .20);
+	}
+
+	.stat:last-child {
+		border-bottom: 0;
+	}
+
+	.sidenav nav .item,
+	.sidenav.mini nav .item {
+		font-size: 0.64rem;
+	}
+}
