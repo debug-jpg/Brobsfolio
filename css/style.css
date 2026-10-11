@@ -312,7 +312,7 @@ main {
 
 #mace {
 	background: linear-gradient(90deg, #123C45, #123C4580),
-		url(/assets/mace.png) center / cover no-repeat;
+		url(../assets/mace.png) center / cover no-repeat;
 }
 
 /* Mission and Vision */
@@ -912,7 +912,7 @@ p {
 	#mace {
 		background:
 			linear-gradient(90deg, var(--hero), #123C4580),
-			url(/assets/mace.png) !important;
+			url(../assets/mace.png) !important;
 	}
 }
 
